@@ -1,0 +1,352 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ba",
+				"background-repeat"
+			],
+			[
+				"bg",
+				"background\tAttr"
+			],
+			[
+				"inpu",
+				"input_name"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"p",
+				"p\tTag"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"frame",
+				"frameset\tTag"
+			],
+			[
+				"div",
+				"div\tTag"
+			],
+			[
+				"al",
+				"alert-text"
+			],
+			[
+				"fn",
+				"function"
+			],
+			[
+				"number",
+				"numberLen"
+			],
+			[
+				"num",
+				"nums"
+			],
+			[
+				"fun",
+				"function"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Lab3_PC6/Desktop/www.zip",
+		"/C/Users/Lab3_PC6/Desktop/New folder/Jinky Conde/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/activities/threeE-Project/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/activities/threeE-Project/www/spec.html",
+		"/C/Users/Lab3_PC6/Desktop/activities/threeE-Project/www/js/process.js",
+		"/C/Users/Lab3_PC6/Desktop/New folder/Jinky Conde/www/css/my-app.css",
+		"/C/Users/Lab3_PC6/Desktop/New folder/Jinky Conde/www/js/my-app.js",
+		"/C/Users/Lab3_PC6/AppData/Local/Temp/Rar$DIa0.256/process.js",
+		"/C/Users/Lab3_PC6/AppData/Local/Temp/Rar$EXa0.166/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/IV-BSIT-B/Jinky Conde/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/IV-B/Joseph Fernandez/www/css/my-app.css",
+		"/C/Users/Lab3_PC6/Desktop/IV-B/Joseph Fernandez/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/IV-B/Joseph Fernandez/www/js/my-app.js",
+		"/C/Users/Lab3_PC6/Desktop/jenny/jenny/www/css/index.css",
+		"/C/Users/Lab3_PC6/Desktop/Jom/README.md",
+		"/C/Users/Lab3_PC6/Desktop/Jom/process.js",
+		"/C/Users/Lab3_PC6/Desktop/Jom/config.xml",
+		"/C/Users/Lab3_PC6/Desktop/jerome/jerome/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/jerome/jerome/www/js/my-app.js",
+		"/E/nid to bring/threeE-Project/www/process.js",
+		"/E/nid to bring/threeE-Project/www/index1.html",
+		"/E/nid to bring/threeE-Project/www/index.html",
+		"/E/nid to bring/threeE-Project/www/js/process.js",
+		"/C/Users/Lab3_PC6/Desktop/Ronald Zamuco/Ronald Zamuco/www/indexIT.html",
+		"/C/Users/Lab3_PC6/Desktop/Ronald Zamuco/Ronald Zamuco/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/ronald/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/Ronald Zamuco/Ronald Zamuco/www/js/my-app.js",
+		"/C/ronald/ronald/www/index.html",
+		"/E/_/Magno, Taguibao Activity/Schedule.html",
+		"/E/_/Magno, Taguibao Activity/Resume.html",
+		"/E/_/Magno, Taguibao Activity/Mhtml.html",
+		"/E/_/Magno, Taguibao Activity/WebPage.html",
+		"/C/Users/Lab3_PC6/Desktop/Jom/www/js/process.js",
+		"/C/Users/Lab3_PC6/Desktop/z/main.html",
+		"/C/Users/Lab3_PC6/Desktop/Jom/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/activities/gelang/js/process.js",
+		"/C/Users/Lab3_PC6/Desktop/PHMJ/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/PHMJ/www/css/bootstrap.css",
+		"/C/Users/Lab3_PC6/Desktop/PHMJ/www/js/process.js",
+		"/C/Users/Lab3_PC6/Desktop/PHMJ/www/css/bootstrap.min.css",
+		"/C/Users/Lab3_PC6/Desktop/PHMJ/www/css/bootstrap-theme.min.css",
+		"/C/Users/Lab3_PC6/Desktop/PHMJ/www/css/index.css",
+		"/C/Users/Lab3_PC6/Desktop/gelang/index.html",
+		"/C/Users/Lab3_PC6/Desktop/frame2.html",
+		"/C/Users/Lab3_PC6/Desktop/z/frame1.html",
+		"/C/Users/Lab3_PC6/Desktop/biodata.html",
+		"/C/Users/Lab3_PC6/Desktop/z/frame3.html",
+		"/C/Users/Lab3_PC6/Desktop/HTML2.html",
+		"/C/Users/Lab3_PC6/Desktop/brian.index.html",
+		"/C/Users/Lab3_PC6/Desktop/frame.index.html",
+		"/C/Users/Lab3_PC6/Desktop/frame3.index.html",
+		"/C/Users/Lab3_PC6/Desktop/PHMJ/www/js/index.js",
+		"/C/Users/Lab3_PC6/Desktop/PHMJ/www/js/framework7.min.js",
+		"/C/Users/Lab3_PC6/Desktop/Jaime/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/Jaime/www/js/index.js",
+		"/E/nid to bring/threeE-Project/www/about.html",
+		"/E/nid to bring/threeE-Project/www/js/my-app.js",
+		"/C/Users/Lab3_PC6/Desktop/Jaime/www/img/CHANNING FRYE.png",
+		"/C/Users/Lab3_PC6/Desktop/zed/zed/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/diana/config.html",
+		"/C/Users/Lab3_PC6/Desktop/threeE-Project/config.xml",
+		"/C/Users/Lab3_PC6/Desktop/exercise3.html.HTML",
+		"/C/Users/Lab3_PC6/Desktop/zed/zed/www/js/my-app.js",
+		"/E/ /_/ /Drive/_/ /Drive/HMAD/III-IT D/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/zed/zed/www/css/framework7.material.colors.min.css",
+		"/C/Users/Lab3_PC6/Desktop/zed/zed/www/css/my-app.css",
+		"/C/Users/Lab3_PC6/Desktop/zed/zed/www/js/index.js",
+		"/E/ /_/ /Drive/_/ /Drive/HMAD/III-IT D/www/css/my-app.css",
+		"/E/ /_/Raymund/platforms/browser/www/css/my-app.css",
+		"/E/ /_/Lizmar/www/css/my-app.css",
+		"/C/Users/Lab3_PC6/Desktop/Lizmar/www/css/my-app.css",
+		"/C/Users/Lab3_PC6/Desktop/Lizmar/www/index.html",
+		"/E/threeE/www/js/process.js",
+		"/E/nid to bring/process.js",
+		"/C/Users/Lab3_PC6/Desktop/Nathan & Josh/www/js/process.js",
+		"/C/Users/Lab3_PC6/Desktop/Nathan & Josh/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/Nathan/www/js/process.js",
+		"/C/Users/Lab3_PC6/Desktop/Nathan/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/leo_jingkee/www/js/process.js",
+		"/C/Users/Lab3_PC6/Desktop/leo_jingkee/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/jaychris11111111/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/leo_jingkee/www/js/index.js",
+		"/C/Users/Lab3_PC6/Desktop/leo_jingkee/www/spec.html",
+		"/C/Users/Lab3_PC6/Desktop/leo_jingkee/www/js/framework7.min.js",
+		"/C/Users/Lab3_PC6/Desktop/leo_jingkee/www/js/jquery-2.1.1.js",
+		"/C/Users/Lab3_PC6/Desktop/gene/www/ne.html",
+		"/C/Users/Lab3_PC6/Desktop/gene/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/Kristine Faith Mejorada/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/louie/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/gene/www/js/framework7.min.js",
+		"/C/Users/Lab3_PC6/Desktop/samson/www/js/my-app.js",
+		"/C/Users/Lab3_PC6/Desktop/kaycee/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/ARENAS/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/ronald/ronald/www/js/my-app.js",
+		"/C/Users/Lab3_PC6/Desktop/JOANNA ARENAS/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/Joanna/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/Joanna/www/js/my-app.js",
+		"/C/Users/Lab3_PC6/Desktop/Jhuneth/Jhuneth/www/js/index.js",
+		"/C/Users/Lab3_PC6/Desktop/fourthC-Project/www/js/framework7.min.js",
+		"/C/Users/Lab3_PC6/Desktop/fourthC-Project/www/js/process.js",
+		"/C/Users/Lab3_PC6/Desktop/relkins.html",
+		"/E/nid to bring/threeE-Project/www/js/framework7.min.js",
+		"/C/Users/Lab3_PC6/Desktop/analynqueenie/www/js/framework7.min.js",
+		"/C/Users/Lab3_PC6/Desktop/analynqueenie/www/js/process.js",
+		"/C/Users/Lab3_PC6/Desktop/ronald/ronald/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/ronald/ronald/www/js/framework7.min.js",
+		"/C/Framework7-1.4.2/Framework7-1.4.2/dist/js/my-app.js",
+		"/C/Framework7-1.4.2/Framework7-1.4.2/src/my-app/my-app.js",
+		"/C/Users/Lab3_PC6/Desktop/ronald/ronald/www/js/my-apps.js",
+		"/C/Framework7-1.4.2/Framework7-1.4.2/src/js/modals.js",
+		"/C/Users/Lab3_PC6/Desktop/ronald/ronald/www/js/framework7.js",
+		"/C/Users/Lab3_PC6/Desktop/ronald/ronald/config.xml",
+		"/C/Users/Lab3_PC6/Desktop/analynqueenie/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/ednaqueenie/www/js/process.js",
+		"/C/Users/Lab3_PC6/Desktop/ednaqueenie/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/JEROME/CALAMIONG/www/js/index.js",
+		"/C/Users/Lab3_PC6/Desktop/Jhuneth/Jhuneth/www/spec.html",
+		"/C/Users/Lab3_PC6/Desktop/Jhuneth/Jhuneth/config.xml",
+		"/C/Users/Lab3_PC6/Desktop/Jhuneth/Jhuneth/www/index.html",
+		"/C/Users/Lab3_PC6/Desktop/ednaqueenie/README.md",
+		"/C/Users/Lab3_PC6/Desktop/exercise2.html.HTML",
+		"/C/Users/Lab3_PC6/Desktop/Exer1.html.HTML",
+		"/C/Users/Lab3_PC6/Desktop/Jhuneth/Jhuneth/platforms/browser/config.xml",
+		"/C/Users/Lab3_PC6/Desktop/Ailes/Ailes/platforms/browser/config.xml",
+		"/C/Users/Lab3_PC6/Desktop/Ailes/Ailes/platforms/browser/www/config.xml",
+		"/C/Users/Lab3_PC6/AppData/Local/Temp/Temp1_Framework7-1.4.2.zip/Framework7-1.4.2/kitchen-sink-material/css/kitchen-sink.css",
+		"/C/Users/Lab3_PC6/Desktop/Jhuneth/Jhuneth/platforms/browser/cordova/node_modules/cordova-serve/README.md",
+		"/C/Users/Lab3_PC6/Desktop/threeE-Project/www/js/process.js"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"center",
+			"theme\n",
+			">\n",
+			"BS",
+			"'>\n",
+			"20",
+			"koala",
+			"clover"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "framework7.ios.min.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 108.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

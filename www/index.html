@@ -1,0 +1,98 @@
+
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>Phaser - Making your first game, part 2</title>
+    <script type="text/javascript" src="js/phaser.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+var w = 800,h = 600;
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, '', { preload: preload, create: create, update: update });
+
+
+
+function preload() {
+	
+    game.load.image('bg',"img/adventure.png");
+  	game.load.spritesheet('kid',"img/running1.png",108,140);
+
+   
+}
+
+var platforms;
+
+var player; 
+
+
+function create() {
+	game.physics.startSystem(Phaser.Physics.ARCADE);
+
+	 game.add.sprite(0,0,'bg');
+
+	
+ 	player = game.add.sprite(20,0,"kid");
+
+
+ 
+	game.physics.arcade.enable(player);
+	
+ 
+   
+
+
+
+ 
+	player.body.bounce.y = 1;
+    player.body.gravity.y = 500;
+    player.scale.x=.6;
+    player.scale.y=.6;
+   
+	player.body.collideWorldBounds = true;
+	
+ 
+
+
+
+    //  Player physics properties. Give the little guy a slight bounce.
+   
+    //cameracode
+
+	game.world.setBounds(0, 0, 10240, 600);
+	
+
+   
+            
+
+}
+			
+
+
+
+
+
+
+
+
+
+
+
+function update() {
+
+
+ 
+}
+
+
+
+</script>
+
+</body>
+</html>

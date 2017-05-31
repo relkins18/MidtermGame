@@ -1,0 +1,470 @@
+
+<!doctype html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8" />
+    <title>Phaser - Making your first game, part 2</title>
+    <script type="text/javascript" src="js/phaser.min.js"></script>
+    <style type="text/css">
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+var w = 800,h = 600;
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, '', { preload: preload, create: create, update: update });
+
+
+
+function preload() {
+	
+    game.load.image('bg',"img/adventure.png");
+  game.load.spritesheet('kid',"img/running1.png",108,140);
+   game.load.image('Tarantula', 'img/Tarantula.png');
+    game.load.image('diamond',"img/diamond.png");
+ 	game.load.image('lupa',"img/lupa.png");
+	game.load.image('lupa1',"img/lupa1.png");
+ 	game.load.image('coin',"img/coin.png");
+ 	game.load.image('money',"img/coin.png");
+ 	game.load.image('missile',"img/missile.png");
+ 	game.load.image('pause','img/pause.png');
+    game.load.spritesheet('buttonvertical', 'img/button-vertical.png',64,64);
+    game.load.spritesheet('buttonhorizontal', 'img/button-horizontal.png',96,64);
+    game.load.spritesheet('buttondiagonal', 'img/button-diagonal.png',64,64);
+    game.load.image('title', 'img/Loading-Page.jpg');
+    game.load.spritesheet('buttonjump', 'img/button-round-b.png',96,96);
+     game.load.spritesheet('button', 'img/button.png', 87, 48);
+ //	game.load.spritesheet('btn-up',"img/btn-up.png",100,100);
+    game.load.image('restart', 'img/restart.png');
+    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
+
+}
+var spider;
+var spiders;
+var score = 0;
+var scoreText;
+var gameOverText;
+var platforms;
+var diamond;
+var diamonds;
+var coin;
+var coins;
+var money;
+var moneys;
+var missile;
+var missiles;
+var _paused;
+var reset;
+var bw=1;
+var lives;
+var nextJump = 0;
+var player; 
+var left=false;
+var right=false;
+var duck= false;
+var jump=false;
+var startButton;
+ var titlepage;
+ var restart;
+var gameStorage;
+
+function create() {
+	game.physics.startSystem(Phaser.Physics.ARCADE);
+ if (!game.device.desktop){ game.input.onDown.add(gofull, this); } //go fullscreen on mobile devices
+	//groups
+	 game.add.sprite(0,0,'bg');
+
+  
+    game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
+    game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
+	
+ 	player = game.add.sprite(20,0,"kid");
+	platforms=game.add.group();
+	platforms.enableBody = true;
+    //  We need to enable physics on the player
+ 
+	game.physics.arcade.enable(player);
+	
+ 
+    var ground = platforms.create(0, 488, 'lupa1');
+    ground.body.immovable= true;
+
+
+    var patungan = platforms.create(500, 300, 'lupa');
+    patungan.scale.x=.5;
+    patungan.scale.y=.2;
+    patungan.body.immovable = true;
+
+    var patungan0 = platforms.create(0, 250, 'lupa');
+    patungan0.body.immovable = true;
+    patungan0.scale.x=.2;
+    patungan0.scale.y=.2;
+
+    var patungan1 = platforms.create(1050,350,'lupa');
+    patungan1.scale.x=.10;
+    patungan1.scale.y=.23;
+    patungan1.body.immovable = true;
+
+    var patungan2 = platforms.create(2000,700,'lupa');
+    patungan2.scale.x=.10;
+    patungan2.scale.y=.20;
+    patungan2.body.immovable = true;
+
+    var patungan3 = platforms.create(1250,250,'lupa');
+    patungan3.scale.x=.10;
+    patungan3.scale.y=.20;
+    patungan3.body.immovable = true;
+
+
+    var patungan4 = platforms.create(600,300,'lupa');
+    patungan4.scale.x=.10;
+    patungan4.scale.y=.20;
+    patungan4.body.immovable = true;
+
+     var patungan5 = platforms.create(3000,300,'lupa');
+    patungan5.scale.x=.60;
+    patungan5.scale.y=.20;
+    patungan5.body.immovable = true;
+
+    var patungan5 = platforms.create(3500,200,'lupa');
+    patungan5.scale.x=.60;
+    patungan5.scale.y=.20;
+    patungan5.body.immovable = true;
+
+
+
+     var patungan6 = platforms.create(4000,300,'lupa');
+    patungan6.scale.x=.60;
+    patungan6.scale.y=.20;
+    patungan6.body.immovable = true;
+    
+    
+   
+
+
+
+   
+    scoreBest =game.add.text(0,50,"Best:"+retrieveBest(),{fill:"red"});
+    scoreText = game.add.text(0,10,'Score: 0 ',{fill:"red"});
+    gameOverText = game.add.text(300,300,"",{fill:"red"});
+  		
+  	scoreBest.fixedToCamera = true;	
+	scoreText.fixedToCamera = true;
+  	gameOverText.fixedToCamera=true;
+	player.body.bounce.y = 0.2;
+    player.body.gravity.y = 500;
+    player.scale.x=.6;
+    player.scale.y=.6;
+   
+	player.body.collideWorldBounds = true;
+	
+ 
+
+
+
+    //  Player physics properties. Give the little guy a slight bounce.
+   
+    //cameracode
+
+	game.world.setBounds(0, 0, 10240, 600);
+	game.camera.follow(player);
+	pause_label = game.add.image(700, 20, 'pause');
+
+	pause_label.fixedToCamera=true;
+	pause_label.scale.x=.1;
+	pause_label.scale.y=.1;
+    pause_label.inputEnabled = true;
+    pause_label.events.onInputUp.add(function () {
+        // When the paus button is pressed, we pause the game
+        game.paused = true;
+
+        //menu = game.add.sprite(w/2, h/2, 'menu');
+        //menu.anchor.setTo(0.5, 0.5);
+ 
+
+    });
+
+    // Add a input listener that can help us return from being paused
+    game.input.onDown.add(unpause, self);
+
+    // And finally the method that handels the pause menu
+  function unpause(event){
+        // Only act if paused
+        if(game.paused){
+            
+
+            
+            
+                // Remove the menu and the label
+                //menu.destroy();
+                // Unpause the game
+                game.paused = false;
+            }
+        
+    };
+
+    
+    player.animations.add('left',[15,14,13,12,11,10,9,8],15,true);
+    player.animations.add('right',[0,1,2,3,4,5,6,7,0],15,true);
+    player.animations.add('turn', [4], 20, true);
+   
+
+           
+
+    createDiamonds(11000);
+    diamond = game.add.group();
+    diamond.enableBody = true;
+    createCoins(11500);
+    coin = game.add.group();
+    coin.enableBody = true;
+
+    createMissile(20000);
+    missile = game.add.group();
+    missile.enableBody = true;
+    createSpider(20000);
+  spider = game.add.group();
+   spider.enableBody = true;
+
+
+
+	buttonjump = game.add.button(600, 472, 'buttonjump', null, this, 0, 1, 0, 1);  //game, x, y, key, callback, callbackContext, overFrame, outFrame, downFrame, upFrame
+    buttonjump.fixedToCamera = true;  //our buttons should stay on the same place  
+    buttonjump.events.onInputOver.add(function(){jump=true;});
+    buttonjump.events.onInputOut.add(function(){jump=false;});
+    buttonjump.events.onInputDown.add(function(){jump=true;});
+    buttonjump.events.onInputUp.add(function(){jump=false;});
+
+    buttonleft = game.add.button(0, 472, 'buttonhorizontal', null, this, 0, 1, 0, 1);
+    buttonleft.fixedToCamera = true;
+    buttonleft.events.onInputOver.add(function(){left=true;});
+    buttonleft.events.onInputOut.add(function(){left=false;});
+    buttonleft.events.onInputDown.add(function(){left=true;});
+    buttonleft.events.onInputUp.add(function(){left=false;});
+
+    buttonright = game.add.button(160, 472, 'buttonhorizontal', null, this, 0, 1, 0, 1);
+    buttonright.fixedToCamera = true;
+    buttonright.events.onInputOver.add(function(){right=true;});
+    buttonright.events.onInputOut.add(function(){right=false;});
+    buttonright.events.onInputDown.add(function(){right=true;});
+    buttonright.events.onInputUp.add(function(){right=false;});
+    
+            
+
+}
+			
+
+
+
+
+
+
+
+
+
+
+
+function update() {
+
+
+  	 game.physics.arcade.collide(player, platforms);
+  	 game.physics.arcade.collide(diamond, platforms);
+  	 game.physics.arcade.overlap(player, diamond, collectDiamond);
+
+   		game.physics.arcade.collide(coin	, platforms);
+	game.physics.arcade.overlap(player, coin, collectCoin);	
+
+	game.physics.arcade.overlap(player, missile, killKid);	
+   //  Reset the players velocity (movement)
+    player.body.velocity.x = 0;
+
+    if (left && !duck) {
+       
+        player.body.velocity.x = -150;
+        player.animations.play('left');
+
+    }
+    else if (right && !duck) {
+        
+      player.body.velocity.x = 150;
+        player.animations.play('right');
+    
+   
+    }
+   else
+    {
+        //  Stand still
+        player.animations.stop();
+
+       
+    }
+    if (jump){ jump_now(); player.loadTexture('kid', 5);}  //change to another frame of the spritesheet
+   // if (fire){fire_now(); player.loadTexture('mario', 8); }
+  
+ 
+}
+
+ function createSpider(time){
+    setInterval(function(){
+        spiders = missile.create(10240,450,"Tarantula");
+        spiders.body.gravity.x = -20;
+      
+      spiders.scale.y =.2;
+       spiders.scale.x =.2;
+        // diamonds.body.bounce.y = 0.2;
+        missiles.body.collideWorldBounds = false    ;
+    },time);
+
+}   
+
+
+
+
+function gofull() { game.scale.startFullScreen(false);}
+
+function jump_now(){  //jump with small delay
+    if (game.time.now > nextJump ){
+       player.body.velocity.y = -440;
+        nextJump = game.time.now + 900;
+    }
+}
+ function actionOnClick(){
+                titlepage.visible =!startButton.visible;
+                startButton.visible = false;
+                game._paused=true;
+                startButton.destroy();
+               
+                if(player.body.touching.down){
+                player.frame = 7;
+                }
+                setTimeout(function(){
+                    
+                },0)
+                    game.camera.follow(player);
+            }              
+function createDiamonds(time){
+    setInterval(function(){
+        diamonds = diamond.create(Math.random()*10240,10,"diamond");
+        diamonds.body.gravity.y = 1000;
+      
+        diamonds.body.bounce.y = 0.2;
+        diamonds.body.collideWorldBounds = true;
+    },time);
+
+}	
+function resetGame(){
+	player.kill
+	player.reset(900,255);
+	score.reset = 'Score:0';
+	scoreText = 'Score:0';
+	gameOverText.text = 'Game Over';
+}
+function collectDiamond (player, diamond) {
+
+    // Removes the diamond from the screen
+    diamond.kill();
+	score += 10;
+    scoreText.text = 'Score: ' + score;
+
+}
+function createCoins(time){
+    setInterval(function(){
+        coins = coin.create(Math.random()*1700,5,"coin");
+        coins.body.gravity.y = 1000;
+        
+        coins.scale.y = .5;
+        coins.scale.x =.5;
+      
+        // diamonds.body.bounce.y = 0.2;
+        coins.body.collideWorldBounds = true;
+    },time);
+
+}	
+
+function collectCoin (player, coin) {
+
+    // Removes the diamond from the screen
+    coin.kill();
+	score +=100;
+    scoreText.text = 'Score: ' + score;
+
+}
+function createMissile(time){
+    setInterval(function(){
+        missiles = missile.create(Math.random()*10240,15,"missile");
+        missiles.body.gravity.x = -100;
+      
+        missiles.scale.y =.3;
+        missiles.scale.x =.3;
+        game._paused= true
+	gameOverText.text= "GAMEOVER";
+        // diamonds.body.bounce.y = 0.2;
+        missiles.body.collideWorldBounds = false	;
+    },time);
+
+
+ }
+ function createMissile(time){
+    setInterval(function(){
+        missiles = missile.create(Math.random()*10240,100,"missile");
+        missiles.body.gravity.x = -100;
+      
+        missiles.scale.y =.2;
+        missiles.scale.x =.2;
+        // diamonds.body.bounce.y = 0.2;
+        missiles.body.collideWorldBounds = false	;
+    },time);
+
+}	
+
+ function createMissile(time){
+    setInterval(function(){
+        missiles = missile.create(Math.random()*10240,140,"missile");
+        missiles.body.gravity.x = -100;
+      
+        missiles.scale.y =.2;
+        missiles.scale.x =.2;
+        // diamonds.body.bounce.y = 0.2;
+        missiles.body.collideWorldBounds = false    ;
+    },time);
+
+}   
+
+
+
+ function killKid(player,missile){
+                if(retrieveBest()<=score){
+                localStorage.setItem("gameStorage",score);
+            }
+            if(player.kill){
+                player.kill();
+                gameOverText.text = "";
+            }
+               
+                    restart = game.add.button(w/2-100,h/2-50, 'restart', actionOnClickThis, this);
+                    restart.fixedToCamera = true;
+                 
+                    function actionOnClickThis() {
+                    window.location.href = window.location.href;
+                    }          
+                }
+            
+
+                
+               
+                
+            
+
+
+
+          function retrieveBest(){
+          return((localStorage.getItem("gameStorage")!=null) || (localStorage.getItem(gameStorage)!=""))? localStorage.getItem("gameStorage"):0;
+ }
+
+</script>
+
+</body>
+</html>
